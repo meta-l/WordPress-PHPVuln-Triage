@@ -6,3 +6,6 @@ Options:
   --deep            Add slower heuristic searches for suspicious PHP patterns
   --no-archive      Do not create a .tar.gz archive
   -h, --help        Show this help
+
+Apache License 2.0
+Copyright 2026 Cyber & Data Protection Limited
