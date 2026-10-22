@@ -35,5 +35,3 @@ This tool performs triage against a live system. It is not a forensic acquisitio
 Some checks depend on third-party services and reference data, including WordPress.org checksum information. The availability and completeness of those sources may affect the results.
 
 This tool supports initial triage and evidence gathering. It is not a substitute for a full digital forensic investigation, incident-response engagement, penetration test, vulnerability assessment or professional security advice.
-
-The software is provided subject to the terms of the repository's LICENSE file. Nothing in this disclaimer modifies or replaces those licence terms
