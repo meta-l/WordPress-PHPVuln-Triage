@@ -29,8 +29,21 @@ Evidence handling
 Limitations
 Disclaimer
 Licence and liability
+
 Features
-Host-level collection
+Automatic discovery of Plesk-hosted WordPress sites
+WordPress core and plugin integrity checks
+PHP version, handler, service and process inventory
+WordPress administrator and MU-plugin review
+Suspicious executable-file discovery
+SSH, cron, service and network evidence collection
+Plesk web-log triage and HTTP 5xx analysis
+Optional heuristic PHP review
+Per-site summary and detailed evidence output
+SHA-256 evidence and archive integrity hashes
+No remediation or automatic deletion
+Designed for subsequent human security analysis
+
 The tool records information including:
 
 Operating system and Plesk versions
