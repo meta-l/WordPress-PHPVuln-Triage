@@ -4,6 +4,7 @@ A read-only security triage and evidence-collection tool for Linux servers runni
 The tool provides a repeatable first-pass investigation following a vulnerability, suspected compromise or security incident. It collects host-level and per-site evidence for subsequent analysis without deliberately modifying, repairing or remediating the environment.
 
 Table of contents
+
 Features
 Requirements
 Installation
