@@ -88,6 +88,7 @@ Samples of recent POST requests resulting in 5xx responses
 An optional deep scan searches WordPress content for a small set of PHP constructs commonly worth reviewing during compromise triage.
 
 Requirements
+
 The tool is intended for:
 
 Linux
@@ -107,6 +108,7 @@ WP-CLI checks are executed using the filesystem owner of each WordPress installa
 Review the script before using it on a production system.
 
 Installation
+
 Clone or download the repository to the server.
 
 Make the script executable:
@@ -118,6 +120,7 @@ sudo ./plesk-wordpress-triage.sh
 Administrative access is required so that the collector can read server configuration and Plesk logs. WordPress checks are subsequently executed under each site's filesystem user.
 
 Usage
+
 Standard triage
 By default, the tool uses a 14-day review window for recent changes and log analysis:
 
@@ -167,6 +170,7 @@ sites/
 The main starting point for analysis is:
 
 summary.tsv
+
 The summary contains one row per detected WordPress installation and records:
 
 Domain
@@ -189,11 +193,13 @@ SHA256SUMS
 A command failing does not necessarily stop the whole collection. errors.txt should therefore always be reviewed before relying on the resulting summary.
 
 Interpreting results
+
 The script is an evidence collector, not an automated compromise detector.
 
 Findings should be considered together rather than treating any individual result as proof of compromise.
 
 WordPress core
+
 A successful core checksum result means that the WordPress core files checked matched the authoritative reference checksums for the installed version.
 
 The --include-root check can also report additional files that are not part of the standard WordPress distribution.
@@ -211,6 +217,7 @@ Unexpected files should still be investigated.
 A genuine WordPress core checksum mismatch warrants further review.
 
 Plugin checks
+
 A successfully verified plugin matched the checksum available to WP-CLI.
 
 Commercial, custom, bundled and privately distributed plugins may not have authoritative checksums available through WordPress.org.
@@ -223,6 +230,7 @@ Skipped/unverified: inconclusive
 An unverified plugin is not automatically malicious.
 
 Executable files in uploads
+
 PHP, PHTML or PHAR files under wp-content/uploads deserve review because upload directories normally contain uploaded content rather than application code.
 
 Their presence does not automatically indicate compromise.
@@ -242,6 +250,7 @@ Legitimate examples can include hosting-management and security components such 
 Unknown or unexplained MU plugins warrant investigation because this location can also provide persistence for malicious code.
 
 Administrator accounts
+
 Every WordPress administrator account should be accounted for.
 
 An unknown administrator, unexpected registration date or unexplained privilege change should be treated as an investigation lead.
@@ -300,6 +309,7 @@ It does not mean:
 This file is malware.
 
 Overall assessment
+
 A triage conclusion should be based on the combined evidence.
 
 Appropriate wording might be:
@@ -313,6 +323,7 @@ Absence of evidence is not proof that compromise never occurred.
 Where credible indicators of compromise are identified, preserve relevant evidence and consider escalation to formal incident response or digital forensic investigation before remediation destroys potentially useful artefacts.
 
 Evidence handling
+
 The generated evidence may contain sensitive information including:
 
 Usernames
@@ -343,6 +354,7 @@ Complete web access logs
 The archive should nevertheless be treated as confidential security evidence.
 
 Limitations
+
 This tool performs initial triage against a live system.
 
 Important limitations include:
@@ -360,6 +372,7 @@ The collector itself executes commands against a live system and therefore is no
 Where litigation, regulatory investigation, law-enforcement involvement or formal digital forensic analysis may be required, appropriate evidence-preservation procedures should be considered before further investigation.
 
 Disclaimer
+
 This tool is intended for authorised security triage and evidence collection from Plesk-hosted WordPress environments.
 
 It collects system, PHP, WordPress, account, file-integrity, process and log information for subsequent security analysis. It does not remove malware, repair files, update software, change application configuration or remediate vulnerabilities.
@@ -381,6 +394,7 @@ Some checks depend on third-party services and reference data, including WordPre
 This tool supports initial triage and evidence gathering. It is not a substitute for a full digital forensic investigation, incident-response engagement, penetration test, vulnerability assessment or professional security advice.
 
 Licence and liability
+
 This project is licensed under the Apache License 2.0. See the LICENSE file for the full licence terms.
 
 The software is provided on an "as is" basis, without warranties or conditions of any kind. Use of the tool, interpretation of its output, and any actions taken as a result remain the responsibility of the user.
