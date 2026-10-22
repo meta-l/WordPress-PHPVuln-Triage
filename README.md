@@ -1,0 +1,8 @@
+Usage: sudo ./plesk-wordpress-triage.sh [options]
+
+Options:
+  --days N          Review retained logs/recent changes for the last N days (default: 14)
+  --output DIR      Store the evidence folder under DIR (default: /root)
+  --deep            Add slower heuristic searches for suspicious PHP patterns
+  --no-archive      Do not create a .tar.gz archive
+  -h, --help        Show this help
