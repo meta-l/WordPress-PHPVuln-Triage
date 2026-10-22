@@ -403,3 +403,8 @@ The software is provided on an "as is" basis, without warranties or conditions o
 To the extent permitted by applicable law, Stiperstone and the project's contributors accept no liability for loss, damage, service interruption, data loss or other consequences arising from the use or misuse of this tool.
 
 Nothing in this README modifies, replaces or overrides the terms of the Apache License 2.0 or, where the tool is supplied as part of a professional engagement, the applicable contractual terms.
+
+
+This project is an open-source evidence-collection tool and does not provide an automated determination that a system is compromised or secure.
+
+If you need assistance interpreting the results, investigating suspected compromise, determining incident scope or planning remediation, Cyber & Data provides WordPress, cyber security and incident-response consultancy.
