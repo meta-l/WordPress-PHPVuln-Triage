@@ -1,3 +1,5 @@
+This tool performs evidence collection and security triage. It does not provide a guarantee that a system has not been compromised and is not a replacement for full digital forensic investigation.
+
 Usage: sudo ./plesk-wordpress-triage.sh [options]
 
 Options:
